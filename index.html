@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseball Salary Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⚾ Baseball Salary Predictor</h1>
+
+    <form id="salaryForm" class="form-grid">
+      <input type="number" name="AtBat" placeholder="AtBat" required>
+      <input type="number" name="Hits" placeholder="Hits" required>
+      <input type="number" name="HmRun" placeholder="HmRun" required>
+      <input type="number" name="Runs" placeholder="Runs" required>
+      <input type="number" name="RBI" placeholder="RBI" required>
+      <input type="number" name="Walks" placeholder="Walks" required>
+      <input type="number" name="Years" placeholder="Years" required>
+      <input type="number" name="CAtBat" placeholder="CAtBat" required>
+      <input type="number" name="CHits" placeholder="CHits" required>
+      <input type="number" name="CHmRun" placeholder="CHmRun" required>
+      <input type="number" name="CRuns" placeholder="CRuns" required>
+      <input type="number" name="CRBI" placeholder="CRBI" required>
+      <input type="number" name="CWalks" placeholder="CWalks" required>
+      <input type="number" name="PutOuts" placeholder="PutOuts" required>
+      <input type="number" name="Assists" placeholder="Assists" required>
+      <input type="number" name="Errors" placeholder="Errors" required>
+
+      <select name="League" required>
+        <option value="A">League: A</option>
+        <option value="N">League: N</option>
+      </select>
+      <select name="Division" required>
+        <option value="E">Division: E</option>
+        <option value="W">Division: W</option>
+      </select>
+      <select name="NewLeague" required>
+        <option value="A">New League: A</option>
+        <option value="N">New League: N</option>
+      </select>
+
+      <button type="submit">Predict Salary</button>
+    </form>
+
+    <div id="result" class="result-box hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

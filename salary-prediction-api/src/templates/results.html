@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Prediction Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Salary Prediction Results</h1>
+        <div class="mt-4">
+            <h2>Predicted Salary: <span id="predicted-salary"></span></h2>
+        </div>
+        <div class="mt-4">
+            <h3>Input Data:</h3>
+            <ul id="input-data-list"></ul>
+        </div>
+        <div class="mt-4">
+            <a href="/" class="btn btn-primary">Make another prediction</a>
+        </div>
+    </div>
+
+    <script>
+        // Assuming the data is passed to this template
+        const predictedSalary = {{ predicted_salary }};
+        const inputData = {{ input_data | tojson }};
+        
+        document.getElementById('predicted-salary').innerText = predictedSalary;
+        
+        const inputDataList = document.getElementById('input-data-list');
+        for (const [key, value] of Object.entries(inputData)) {
+            const listItem = document.createElement('li');
+            listItem.innerText = `${key}: ${value}`;
+            inputDataList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
